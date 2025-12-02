@@ -10,6 +10,10 @@ social:
 url: posts/d365/xrmtoolbox-export-entity-data-dictionary
 ---
 
+Learn how to export entity metadata and option set values from Microsoft Dynamics 365 or Power Apps using XrmToolBox plugins such as Metadata Document Generator and Attributes Factory, with step-by-step guidance and Excel output examples.
+
+<!--more-->
+
 When working with Microsoft Dynamics 365 or Power Apps, business users may often request details of option sets (choice fields) within an entity.
 If the entity contains only a few option set fields, one can simply leverage the **Level up for Dynamics 365/Power Apps** browser extension and use the **SHOW OPTIONSET VALUES** feature, then copy and paste the results into Excel.
 

@@ -5,6 +5,10 @@ tags: ["Dynamics 365", "D365 Note"]
 description: A guide on commonly used SQL queries in Dynamics 365 for querying views, reports, file sizes, security roles, and user assignments.
 ---
 
+A guide on commonly used SQL queries in Dynamics 365 for querying views, reports, file sizes, security roles, and user assignments.
+
+<!--more-->
+
 ## Querying all views under a specific entity
 
 ```sql

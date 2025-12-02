@@ -2,14 +2,17 @@
 title: "[Sample] D365 - Set User Default Time Zone"
 date: 2025-08-28T04:06:31Z
 tags: ["Dynamics 365", "XrmToolBox"]
-description:
-  Learn how to set the default time zone for users in Dynamics 365 using the User Settings Utility in XrmToolBox. This guide covers installation, user information loading, and time zone updating, along with SQL queries to retrieve current user time zone settings.
+description: Learn how to set the default time zone for users in Dynamics 365 using the User Settings Utility in XrmToolBox. This guide covers installation, user information loading, and time zone updating, along with SQL queries to retrieve current user time zone settings.
 url: posts/d365/set-default-time-zone-for-user
 
 cover:
   image: "images/hero-d365-default.webp"
 
 ---
+
+Learn how to set the default time zone for users in Dynamics 365 using the User Settings Utility in XrmToolBox. This guide covers installation, user information loading, and time zone updating, along with SQL queries to retrieve current user time zone settings.
+
+<!--more-->
 
 （1）Install and open **User Settings Utility** in XrmToolBox
 

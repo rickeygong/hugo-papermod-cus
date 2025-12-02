@@ -8,7 +8,7 @@ series: ["Themes Guide"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: true
-
+showCoverImg: true
 cover:
   image: images/bg.webp
   caption: "Generated using [OG Image Playground by Vercel](https://og-playground.vercel.app/)"
