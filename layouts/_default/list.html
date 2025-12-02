@@ -51,6 +51,8 @@
 {{- partial "home_info.html" . }}
 {{- end }}
 
+<h2 style="margin-bottom: calc(var(--gap));">{{ i18n "recent_posts" }}</h2>
+
 {{- $term := .Data.Term }}
 {{- range $index, $page := $paginator.Pages }}
 
