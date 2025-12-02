@@ -16,6 +16,7 @@
     --code-bg: rgb(245, 245, 245);
     --border: rgb(238, 238, 238);
     --icon-color: rgb(30, 30, 30);
+    --border-bottom: rgb(108, 108, 108);
     color-scheme: light;
 }
 
@@ -30,6 +31,7 @@
     --code-bg: rgb(55, 56, 62);
     --border: rgb(51, 51, 51);
     --icon-color: rgb(246, 105, 3);
+    --border-bottom: rgb(246, 105, 3);
     color-scheme: dark;
 }
 
