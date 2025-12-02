@@ -42,7 +42,7 @@
 
 {{- if .IsHome }}
 {{- $pages = where site.RegularPages "Type" "in" site.Params.mainSections }}
-{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true"  }}
+{{- $pages = where $pages "Params.hiddenInHomeList" "!=" "true" }}
 {{- end }}
 
 {{- $paginator := .Paginate $pages }}
@@ -64,8 +64,15 @@
 {{- end }}
 
 <article class="{{ $class }}">
+
+  {{/* Homepage List - Article cover img */}}
   {{- $isHidden := (.Param "cover.hiddenInList") | default (.Param "cover.hidden") | default false }}
+  {{- $showCoverImg := .Param "showCoverImg" | default false }}
+  {{- if $showCoverImg }}
   {{- partial "cover.html" (dict "cxt" . "IsSingle" false "isHidden" $isHidden) }}
+  {{- end }}
+
+  {{/* Homepage List - Article Titles */}}
   <header class="entry-header">
     <h2 class="entry-hint-parent">
       {{- .Title }}
@@ -79,16 +86,21 @@
       {{- end }}
     </h2>
   </header>
+
+  {{/* Homepage List - Article Meta */}}
+  {{- if not (.Param "hideMeta") }}
+  <footer class="entry-footer" style="margin: 5px 0;">
+    {{- partial "post_meta.html" . -}}
+  </footer>
+  {{- end }}
+
+  {{/* Homepage List - Article Summary */}}
   {{- if (ne (.Param "hideSummary") true) }}
   <div class="entry-content">
     <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
   </div>
   {{- end }}
-  {{- if not (.Param "hideMeta") }}
-  <footer class="entry-footer">
-    {{- partial "post_meta.html" . -}}
-  </footer>
-  {{- end }}
+
   <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
 </article>
 {{- end }}
