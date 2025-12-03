@@ -49,3 +49,6 @@
 
 - id: copyright-info
   translation: "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license."
+
+- id: share_this_post_on
+  translation: "Share this post on："
