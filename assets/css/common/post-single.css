@@ -130,6 +130,10 @@
     margin-top: 5px;
 }
 
+.post-content li::marker {
+    color: var(--accent);
+}
+
 .post-content li p {
     margin-bottom: 0;
 }
@@ -316,7 +320,7 @@
     opacity: 0.9;
 }
 
-.toc li {
+.toc li::marker {
     color: var(--accent);
 }
 
