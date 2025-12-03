@@ -47,6 +47,7 @@
     {{- if not (.Param "disableAnchoredHeadings") }}
     {{- partial "anchored_headings.html" .Content -}}
     {{- else }}{{ .Content }}{{ end }}
+    {{- i18n "the_end" | default "The End." }}
   </div>
   {{- end }}
 
