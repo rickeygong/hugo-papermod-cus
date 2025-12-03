@@ -1,0 +1,21 @@
+<div class="copyright-notice">
+    <p class="title">{{- i18n "copyright-title" | default "Copyright Notice" }}</p>
+    {{- $currentUrl := .Permalink }}
+    <ul class="list">
+        <li>
+            {{- i18n "copyright-author" | default "Author" }}：
+            {{- with .Params.author }}{{ . }}{{ else }}{{ .Site.Params.author }}{{ end }}
+        </li>
+        <li>
+            {{- i18n "copyright-license" | default "License" }}：
+            <a class="link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a>
+        </li>
+        <li>
+            {{- i18n "copyright-link" | default "Link" }}：
+            <a class="link" href="{{ $currentUrl }}">{{ $currentUrl }}</a>
+        </li>
+    </ul>
+    <p class="license-info">
+        {{- i18n "copyright-info" | default "This work is licensed under a Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Please attribute the source, use non-commercially, and maintain the same license." }}
+    </p>
+</div>

@@ -4,7 +4,7 @@
   <header class="post-header">
     {{ partial "breadcrumbs.html" . }}
 
-    {{/*  Article Title  */}}
+    {{/* Article Title */}}
     <h1 class="post-title entry-hint-parent">
       {{ .Title }}
       {{- if .Draft }}
@@ -16,8 +16,8 @@
       </span>
       {{- end }}
     </h1>
-    
-    {{/*  Article meta  */}}
+
+    {{/* Article meta */}}
     {{- if not (.Param "hideMeta") }}
     <div class="post-meta">
       {{- partial "post_meta.html" . -}}
@@ -27,7 +27,7 @@
     </div>
     {{- end }}
 
-    {{/*  Article Description  */}}
+    {{/* Article Description */}}
     {{- if .Description }}
     <div class="post-description">
       {{ .Description }}
@@ -49,7 +49,13 @@
     {{- else }}{{ .Content }}{{ end }}
     {{- i18n "the_end" | default "The End." }}
   </div>
+
+  {{/* Copyright information */}}
+  {{ partial "copyright.html" . }}
+
   {{- end }}
+
+  <hr style="border: none; border-top: 1px solid var(--accent); margin: 2em 0;" />
 
   <footer class="post-footer">
     {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
