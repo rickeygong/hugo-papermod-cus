@@ -184,9 +184,9 @@
     margin: auto 0;
 }
 
-.post-content .highlight table {
-    /* border-radius: var(--radius); */
-}
+/* .post-content .highlight table {
+    border-radius: var(--radius);
+} */
 
 .post-content .highlight:not(table) {
     margin: 10px auto;
