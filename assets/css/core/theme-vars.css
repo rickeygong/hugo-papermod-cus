@@ -20,6 +20,7 @@
     --accent: rgb(30, 30, 30);
     --post-entry-bg: rgb(255, 255, 255);
     --post-entry-border: rgb(238, 238, 238);
+    --toc-border: rgb(238, 238, 238);
     color-scheme: light;
 }
 
@@ -38,6 +39,7 @@
     --accent: rgb(246, 105, 3);
     --post-entry-bg: rgb(33, 39, 55);
     --post-entry-border: rgb(33, 39, 55);
+    --toc-border: rgbrgb(33, 39, 55);
     color-scheme: dark;
 }
 

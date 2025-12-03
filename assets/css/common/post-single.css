@@ -80,11 +80,27 @@
 }
 
 .post-content a,
-.post-meta .i18n_list li a,
-.toc a:hover {
+.post-meta .i18n_list li a {
     box-shadow: 0 1px 0;
     box-decoration-break: clone;
     -webkit-box-decoration-break: clone;
+}
+
+.toc a {
+    /* 添加下划线 */
+    text-decoration: underline;
+    /* 设置为虚线样式 */
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+}
+
+.toc a:hover {
+    /* 添加下划线 */
+    text-decoration: underline;
+    /* 设置为虚线样式 */
+    text-decoration-style: dashed;
+    text-underline-offset: 5px;
+    color: var(--accent);
 }
 
 .post-content a code {
@@ -294,6 +310,10 @@
     margin: 5px 20px;
     padding: 0 10px;
     opacity: 0.9;
+}
+
+.toc li {
+    color: var(--accent);
 }
 
 .toc li ul {
