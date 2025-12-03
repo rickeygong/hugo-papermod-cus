@@ -48,15 +48,18 @@ pre {
 }
 
 .copy-code {
-    display: none;
+    /* display: none; */
     position: absolute;
-    top: 4px;
-    right: 4px;
-    color: rgba(255, 255, 255, 0.8);
-    background: rgba(78, 78, 78, 0.8);
-    border-radius: var(--radius);
-    padding: 0 5px;
-    font-size: 14px;
+    top: -12px;
+    right: 12px;
+    /* color: rgba(255, 255, 255, 0.8); */
+    /* background: rgba(78, 78, 78, 0.8); */
+    color: rgb(255, 255, 255);
+    background: rgb(52, 63, 96);
+    /* border-radius: var(--radius); */
+    border-radius: .25rem;
+    padding: 4px 8px;
+    font-size: 12px;
     user-select: none;
 }
 
