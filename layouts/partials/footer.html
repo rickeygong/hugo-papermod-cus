@@ -1,24 +1,56 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
-    {{- if not site.Params.footer.hideCopyright }}
-        {{- if site.Copyright }}
-        <span>{{ site.Copyright | markdownify }}</span>
-        {{- else }}
-        <span>&copy; {{ now.Year }} <a href="{{ "" | absLangURL }}">{{ site.Title }}</a></span>
-        {{- end }}
-        {{- print " · "}}
-    {{- end }}
+    {{ $travellings := resources.Get "icons/travellings.svg" }}
+    <hr style="border: none; border-top: 1px solid var(--accent); margin: 2em 0;" />
+    <div class="footer-inner">
+        <div class="footer-left">
+            <p>Copyright © {{ now.Year }} {{ .Site.Title }} · All rights reserved.</p>
+            <div class="footer-icons">
 
-    {{- with site.Params.footer.text }}
-        {{ . | markdownify }}
-        {{- print " · "}}
-    {{- end }}
+                {{/*  moe  */}}
+                {{- if .Site.Params.footer.moe.enable -}}                
+                <a href="{{ .Site.Params.footer.moe.url }}" target="_blank" rel="noopener" title="moe">
+                    {{ $moe := resources.Get "icons/moe.png" }}
+                    {{ $resized := $moe.Resize "32x32" }}
+                    <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+                        alt="foreverblog">
+                </a>
+                {{- end -}}
 
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
+                {{/*  travellings  */}}
+                {{- if .Site.Params.footer.travellings.enable -}}
+                <a href="{{ .Site.Params.footer.travellings.url }}" target="_blank" rel="noopener" title="开往-友链接力">
+                    {{ $travellings.Content | safeHTML }}
+                </a>
+                {{- end -}}
+
+                {{/*  foreverblog  */}}
+                {{- if .Site.Params.footer.foreverblog.enable -}}
+                <a href="{{ .Site.Params.footer.foreverblog.url }}" target="_blank" rel="noopener" title="foreverblog">
+                    {{ $blogsclub := resources.Get "icons/foreverblog.png" }}
+                    {{ $resized := $blogsclub.Resize "x16" }}
+                    <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+                        alt="foreverblog">
+                </a>
+                {{- end -}}
+                
+                {{/*  blogsclub  */}}
+                {{- if .Site.Params.footer.blogsclub.enable -}}
+                <a href="{{ .Site.Params.footer.blogsclub.url }}" target="_blank" rel="noopener" title="blogsclub">
+                    {{ $blogsclub := resources.Get "icons/blogsclub.png" }}
+                    {{ $resized := $blogsclub.Resize "98x40" }}
+                    <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
+                        alt="BlogsClub图标">
+                </a>
+                {{- end -}}
+
+            </div>
+        </div>
+        <div class="footer-right">
+            <a href="/contact" class="contact-btn">联系我</a> &nbsp; · &nbsp;
+            <a href="/index.xml" class="contact-btn" target="_blank" rel="noopener">订阅RSS</a>
+        </div>
+    </div>
 </footer>
 {{- end }}
 
@@ -40,7 +72,7 @@
         if (scrollPosition) {
             menu.scrollLeft = parseInt(scrollPosition, 10);
         }
-        
+
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }

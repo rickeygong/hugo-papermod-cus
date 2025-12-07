@@ -31,3 +31,19 @@ homeInfoParams:
 #     hidden: true # hide everywhere but not in structured data
 #     hiddenInList: true # hide on list pages and home
 #     hiddenInSingle: true # hide on single page
+
+
+footer:
+  moe:
+    enable: true
+    url: "https://icp.gov.moe/?keyword=mgrowup.com"
+  travellings:
+    enable: true
+    url: "https://www.travellings.cn/go.html"
+  foreverblog:
+    enable: true
+    url: "https://www.foreverblog.cn/"
+  blogsclub:
+    enable: true
+    url: "https://www.blogsclub.org/blog/45.html"  
+  
