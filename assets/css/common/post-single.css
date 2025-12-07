@@ -168,6 +168,10 @@
     border: 1px solid var(--accent);
 }
 
+.post-content table{
+    margin-bottom: 15px;
+}
+
 .post-content table th,
 .post-content table:not(.highlighttable, .highlight table, .gist .highlight) td {
     min-width: 80px;
