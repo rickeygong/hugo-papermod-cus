@@ -1,43 +1,43 @@
 {{- if not (.Param "hideFooter") }}
 <footer class="footer">
-    {{ $travellings := resources.Get "icons/travellings.svg" }}
     <hr style="border: none; border-top: 1px solid var(--accent); margin: 2em 0;" />
     <div class="footer-inner">
         <div class="footer-left">
             <p>Copyright © {{ now.Year }} {{ .Site.Title }} · All rights reserved.</p>
             <div class="footer-icons">
 
-                {{/*  moe  */}}
-                {{- if .Site.Params.footer.moe.enable -}}                
+                {{/* moe */}}
+                {{- if .Site.Params.footer.moe.enable -}}
                 <a href="{{ .Site.Params.footer.moe.url }}" target="_blank" rel="noopener" title="moe">
-                    {{ $moe := resources.Get "icons/moe.png" }}
+                    {{ $moe := resources.Get "icons/IconMoe.png" }}
                     {{ $resized := $moe.Resize "32x32" }}
                     <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
                         alt="foreverblog">
                 </a>
                 {{- end -}}
 
-                {{/*  travellings  */}}
+                {{/* travellings */}}
                 {{- if .Site.Params.footer.travellings.enable -}}
                 <a href="{{ .Site.Params.footer.travellings.url }}" target="_blank" rel="noopener" title="开往-友链接力">
+                    {{ $travellings := resources.Get "icons/IconTravellings.svg" }}
                     {{ $travellings.Content | safeHTML }}
                 </a>
                 {{- end -}}
 
-                {{/*  foreverblog  */}}
+                {{/* foreverblog */}}
                 {{- if .Site.Params.footer.foreverblog.enable -}}
                 <a href="{{ .Site.Params.footer.foreverblog.url }}" target="_blank" rel="noopener" title="foreverblog">
-                    {{ $blogsclub := resources.Get "icons/foreverblog.png" }}
+                    {{ $blogsclub := resources.Get "icons/IconForeverBlog.png" }}
                     {{ $resized := $blogsclub.Resize "x16" }}
                     <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
                         alt="foreverblog">
                 </a>
                 {{- end -}}
-                
-                {{/*  blogsclub  */}}
+
+                {{/* blogsclub */}}
                 {{- if .Site.Params.footer.blogsclub.enable -}}
                 <a href="{{ .Site.Params.footer.blogsclub.url }}" target="_blank" rel="noopener" title="blogsclub">
-                    {{ $blogsclub := resources.Get "icons/blogsclub.png" }}
+                    {{ $blogsclub := resources.Get "icons/IconBlogsClub.png" }}
                     {{ $resized := $blogsclub.Resize "98x40" }}
                     <img src="{{ $resized.RelPermalink }}" width="{{ $resized.Width }}" height="{{ $resized.Height }}"
                         alt="BlogsClub图标">
