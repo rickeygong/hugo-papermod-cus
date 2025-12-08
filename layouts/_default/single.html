@@ -51,7 +51,9 @@
   </div>
 
   {{/* Copyright information */}}
-  {{ partial "copyright.html" . }}
+  {{ if eq (.Params.enableCopyright | default false) true }}
+    {{ partial "copyright.html" . }}
+  {{ end }}
 
   {{- end }}
 
