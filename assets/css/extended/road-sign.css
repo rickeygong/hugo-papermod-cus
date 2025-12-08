@@ -76,3 +76,9 @@
     color: var(--accent);
     transform: translateY(-3px);
 }
+
+.cus-hr{
+    border: none; 
+    border-top: 1px dashed var(--accent); 
+    margin: 2em 0;
+}
