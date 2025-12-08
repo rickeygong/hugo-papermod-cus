@@ -10,7 +10,7 @@
     {{- end }}
     {{- with $rss }}
     <a href="{{ .RelPermalink }}" title="RSS" aria-label="RSS">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="var(--accent)" stroke-width="2"
         stroke-linecap="round" stroke-linejoin="round" height="23">
         <path d="M4 11a9 9 0 0 1 9 9" />
         <path d="M4 4a16 16 0 0 1 16 16" />
@@ -20,11 +20,11 @@
     {{- end }}
     {{- end }}
   </h1>
-  {{- if .Description }}
-  <div class="post-description">
-    {{ .Description }}
-  </div>
-  {{- end }}
+
+  <p style="font-style: italic; margin-top:var(--gap)">
+    {{- i18n "archives-des" | default "All the articles I've archived." }}
+  </p>
+  
 </header>
 
 {{- $pages := where site.RegularPages "Type" "in" site.Params.mainSections }}
@@ -69,6 +69,12 @@
         <div class="archive-meta">
           {{- partial "post_meta.html" . -}}
         </div>
+        {{- if (ne (.Param "hideSummary") true) }}
+        <div class="entry-content">
+          <p>{{ .Summary | plainify | htmlUnescape }}{{ if .Truncated }}...{{ end }}</p>
+        </div>
+        {{- end }}
+        
         <a class="entry-link" aria-label="post link to {{ .Title | plainify }}" href="{{ .Permalink }}"></a>
       </div>
       {{- end }}

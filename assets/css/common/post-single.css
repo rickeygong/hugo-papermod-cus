@@ -86,18 +86,8 @@
     -webkit-box-decoration-break: clone;
 }
 
-.toc a {
-    /* 添加下划线 */
-    text-decoration: underline;
-    /* 设置为虚线样式 */
-    text-decoration-style: dashed;
-    text-underline-offset: 5px;
-}
-
 .toc a:hover {
-    /* 添加下划线 */
     text-decoration: underline;
-    /* 设置为虚线样式 */
     text-decoration-style: dashed;
     text-underline-offset: 5px;
     color: var(--accent);

@@ -26,6 +26,8 @@
     --ft-paginav-bg: rgb(245, 245, 245);
     --ft-paginav-border: rgb(238, 238, 238);
 
+    --archive-entry-title: rgb(0, 108, 172);
+
     color-scheme: light;
 }
 
@@ -49,6 +51,8 @@
 
     --ft-paginav-bg: rgb(33, 39, 55);
     --ft-paginav-border: rgb(33, 39, 55);
+
+    --archive-entry-title: rgb(246, 105, 3);
 
     color-scheme: dark;
 }

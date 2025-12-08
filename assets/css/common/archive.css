@@ -35,10 +35,24 @@
 .archive-entry-title {
     margin: 5px 0;
     font-weight: 400;
+    color: var(--archive-entry-title);
 }
 
 .archive-count,
 .archive-meta {
     color: var(--secondary);
     font-size: 14px;
+}
+
+
+.archive-year h2{
+    font-size: 1.5em;
+}
+
+.archive-year h3{
+    font-size: 1.125em;
+}
+
+.archive-entry:hover .archive-entry-title {
+    font-weight: 600;
 }

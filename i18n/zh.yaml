@@ -55,3 +55,6 @@
 
 - id: share_this_post_on
   translation: "Share this post on："
+
+- id: archives_des
+  translation: "All the articles I've archived."
