@@ -74,6 +74,10 @@ button#theme-toggle {
     white-space: nowrap;
 }
 
+#menu li a:hover{
+    color: var(--accent);
+}
+
 #menu li+li {
     margin-inline-start: var(--gap);
 }
