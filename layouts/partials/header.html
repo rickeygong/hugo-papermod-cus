@@ -84,13 +84,19 @@
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}
             {{- $is_search := eq (site.GetPage .KeyName).Layout `search` }}
+            {{- $onlyshowpre := .Params.onlyShowPre | default false }}
             <li>
+                {{/* Test print: {{ $onlyshowpre }} */}}
                 <a href="{{ .URL | absLangURL }}" title="{{ .Title | default .Name }} {{- cond $is_search (" (Alt + /)"
                     | safeHTMLAttr) ("" | safeHTMLAttr ) }}" {{- cond $is_search (" accesskey=/" | safeHTMLAttr) ("" |
                     safeHTMLAttr ) }}>
                     <span {{- if eq $menu_item_url $page_url }} class="active" {{- end }}>
+                        {{- if $onlyshowpre }}
                         {{- .Pre }}
-                        {{- .Name -}}
+                        {{- else }}
+                        {{- if .Pre }}{{ .Pre }}{{ end }}
+                        {{- if .Name }}{{ .Name }}{{ end }}
+                        {{- end }}
                         {{ .Post -}}
                     </span>
                     {{- if (findRE "://" .URL) }}&nbsp;

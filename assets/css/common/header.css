@@ -88,10 +88,22 @@ button#theme-toggle {
     text-underline-offset: 5px;
     text-decoration: underline;
     text-decoration-style: wavy;
-    text-decoration-thickness: 2px;;
+    text-decoration-thickness: 2px;
 }
 
-.lang-switch li,
+#menu a svg {
+    vertical-align: middle;
+}
+
+#menu .active svg {
+    stroke: var(--accent);
+}
+
+#menu a:hover svg {
+    stroke: var(--accent);
+}
+
+#menu a svg .lang-switch li,
 .lang-switch ul,
 .logo-switches {
     display: inline-flex;
