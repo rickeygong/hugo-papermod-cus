@@ -23,3 +23,11 @@ git submodule update --init --recursive
 - Dark mode:
 
 ![Dark mode home page](/assets/images/readmeHomePage-D.webp)
+
+## Changelog
+
+(😎I'll write it if I remember to.)
+
+| Date | Description | Notes |
+| :--- | :--- | :--- |
+| 2025-12-09 | Added blogroll. |  |
