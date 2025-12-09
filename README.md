@@ -13,3 +13,13 @@ Most of the styling modifications I made reference the [Astro Paper](https://git
 ```bash
 git submodule update --init --recursive
 ```
+
+## Let's see what it looks like
+
+Light mode
+
+![Light mode home page](/assets/images/readmeHomePage-L.webp)
+
+Dark mode.
+
+![Dark mode home page](/assets/images/readmeHomePage-D.webp)

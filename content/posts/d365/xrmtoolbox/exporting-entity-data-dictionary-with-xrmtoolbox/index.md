@@ -1,5 +1,5 @@
 ---
-title: "[Sample] D365 - Exporting Entity Data Dictionary with XrmToolBox"
+title: "D365 - Exporting Entity Data Dictionary with XrmToolBox"
 description: Learn how to export entity metadata and option set values from Microsoft Dynamics 365 or Power Apps using XrmToolBox plugins such as Metadata Document Generator and Attributes Factory, with step-by-step guidance and Excel output examples.
 date: 2025-03-14T04:06:31Z
 weight: 2
