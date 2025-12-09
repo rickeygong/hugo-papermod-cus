@@ -1,5 +1,15 @@
-# hugo-papermod-cus
+# About this repository
 
 A blog built based on [Hugo PaperMod](https://github.com/rickeygong/hugo-PaperMod), with some styles modified according to personal preferences.
 
-![Test Img](/assets/images/flink-sample1.webp)
+Most of the styling modifications I made reference the [Astro Paper](https://github.com/satnaing/astro-paper) theme because it looks so great.
+
+## Running Locally
+
+1. Clone this repository.
+
+2. Inside the folder of your Hugo site 'hugo-papermod-cus', run:
+
+```bash
+git submodule update --init --recursive
+```
