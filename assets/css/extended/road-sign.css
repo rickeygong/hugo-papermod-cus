@@ -156,16 +156,29 @@ span {
     display: block;
     width: 100%;
     margin: 0.5rem auto;
-    text-decoration: none;
     border-radius: 18px;
     overflow: hidden;
-    background: rgba(var(--entry), 0.25);
+    background-color: color-mix(in srgb, var(--friend-link-bg) 25%, transparent);
     backdrop-filter: blur(12px) saturate(180%);
-    -webkit-backdrop-filter: blur(12px) saturate(180%);
     box-shadow:
         0 4px 20px rgba(0, 0, 0, 0.08),
         0 0 0 1px rgba(var(--entry), 0.2) inset;
     transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.friend-link-avatar {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.friend-avatar {
+    width: 56px !important;
+    height: 56px !important;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-right: 10px;
 }
 
 .friend-link-container .friend-link-div {
@@ -179,14 +192,18 @@ span {
     height: 56px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center;
+    display: block;
     flex-shrink: 0;
     margin-right: 10px;
 }
+
 
 .friend-link-container .friend-link-info {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    min-width: 0;
 }
 
 .friend-link-container .friend-name {
@@ -207,6 +224,13 @@ span {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 12px;
+    
+}
+
+.friend-link-container .url-name{
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--friend-link-url-name);
 }
 
 @media screen and (max-width: 600px) {

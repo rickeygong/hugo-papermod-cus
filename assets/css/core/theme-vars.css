@@ -27,7 +27,8 @@
     --ft-paginav-bg: rgb(245, 245, 245);
     --ft-paginav-border: rgb(238, 238, 238);
     --archive-entry-title: rgb(0, 108, 172);
-    --friend-link-border: rgb(255, 16, 47);
+    --friend-link-bg: rgb(106, 159, 181);
+    --friend-link-url-name: rgb(171, 75, 8);
     color-scheme: light;
 }
 
@@ -53,7 +54,8 @@
     --ft-paginav-bg: rgb(33, 39, 55);
     --ft-paginav-border: rgb(33, 39, 55);
     --archive-entry-title: rgb(246, 105, 3);
-    --friend-link-border: rgb(255, 16, 47);
+    --friend-link-bg: rgb(33, 39, 55);
+    --friend-link-url-name: rgb(171, 75, 8);
     color-scheme: dark;
 }
 

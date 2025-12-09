@@ -54,12 +54,15 @@
             <a href="{{ .url }}" title="{{ .name }}" class="friend-link" target="_blank" rel="friend">
                 <div class="friend-link-div">
                     <div class="friend-link-avatar">
-                        <img src="{{ .avatar }}" class="friend-avatar" loading="lazy" alt="Avatar">
+                        {{ $path := replace .avatar "/images/" "" }}
+                        {{ $orig := resources.Get (printf "images/%s" $path) }}
+                        {{ $img := $orig.Fill "200x200 Center" }}
+                        <img src="{{ $img.Permalink }}" class="friend-avatar" loading="lazy" alt="{{ .name }}">
                     </div>
                     <div class="friend-link-info">
                         <span class="friend-name">{{ .name }}</span>
                         <p class="friend-bio">{{ .bio }}</p>
-                        <p class="friend-bio">{{ .urlname }}</p>
+                        <p class="friend-bio url-name">{{ .urlname }}</p>
                     </div>
                 </div>
             </a>
@@ -71,8 +74,6 @@
 
     {{- end }}
 
-    <hr class="cus-hr" />
-
     <footer class="post-footer">
         {{- $tags := .Language.Params.Taxonomies.tag | default "tags" }}
         <ul class="post-tags">
@@ -80,12 +81,6 @@
             <li><a href="{{ .Permalink }}">#&nbsp;{{ .LinkTitle }}</a></li>
             {{- end }}
         </ul>
-        {{- if (.Param "ShowPostNavLinks") }}
-        {{- partial "post_nav_links.html" . }}
-        {{- end }}
-        {{- if (and site.Params.ShowShareButtons (ne .Params.disableShare true)) }}
-        {{- partial "share_icons.html" . -}}
-        {{- end }}
     </footer>
 
     {{- if (.Param "comments") }}
