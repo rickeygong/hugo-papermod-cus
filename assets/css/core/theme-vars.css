@@ -18,16 +18,16 @@
     --icon-color: rgb(30, 30, 30);
     --border-bottom: rgb(108, 108, 108);
     --accent: rgb(30, 30, 30);
+    --accent-dk: rgb(30, 30, 30);
+    --accent-border: rgb(30, 30, 30);
     --post-entry-bg: rgb(245, 245, 245);
     --post-entry-border: rgb(245, 245, 245);
     --toc-border: rgb(238, 238, 238);
     --copy-code: rgb(78, 78, 78);
-    
     --ft-paginav-bg: rgb(245, 245, 245);
     --ft-paginav-border: rgb(238, 238, 238);
-
     --archive-entry-title: rgb(0, 108, 172);
-
+    --friend-link-border: rgb(255, 16, 47);
     color-scheme: light;
 }
 
@@ -44,16 +44,16 @@
     --icon-color: rgb(246, 105, 3);
     --border-bottom: rgb(246, 105, 3);
     --accent: rgb(246, 105, 3);
+    --accent-dk: rgb(171, 75, 8);
+    --accent-border: rgb(171, 75, 8);
     --post-entry-bg: rgb(33, 39, 55);
     --post-entry-border: rgb(33, 39, 55);
     --toc-border: rgbrgb(33, 39, 55);
     --copy-code: rgb(52, 63, 96);
-
     --ft-paginav-bg: rgb(33, 39, 55);
     --ft-paginav-border: rgb(33, 39, 55);
-
     --archive-entry-title: rgb(246, 105, 3);
-
+    --friend-link-border: rgb(255, 16, 47);
     color-scheme: dark;
 }
 
