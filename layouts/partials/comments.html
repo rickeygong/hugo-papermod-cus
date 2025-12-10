@@ -1,0 +1,81 @@
+{{- $langMap := dict
+    "zh"    "zh-CN"
+    "zh-tw" "zh-TW"
+    "zh-hk" "zh-HK"
+    "ar"    "ar"
+    "be"    "be"
+    "bg"    "bg"
+    "ca"    "ca"
+    "cs"    "cs"
+    "da"    "da"
+    "de"    "de"
+    "el"    "gr"
+    "eo"    "eo"
+    "es"    "es"
+    "eu"    "eu"
+    "fa"    "fa"
+    "fr"    "fr"
+    "he"    "he"
+    "hu"    "hu"
+    "id"    "id"
+    "it"    "it"
+    "ja"    "ja"
+    "km"    "kh"
+    "ko"    "ko"
+    "nl"    "nl"
+    "pl"    "pl"
+    "pt"    "pt"
+    "ro"    "ro"
+    "ru"    "ru"
+    "th"    "th"
+    "tr"    "tr"
+    "uk"    "uk"
+    "uz"    "uz"
+    "vi"    "vi"
+-}}
+{{- $giscusLang := index $langMap site.Language.Lang | default "en" -}}
+
+<div id="m-comment"></div>
+
+<script>
+    const getCurrentGiscusTheme = () => {
+        const theme = document.documentElement.getAttribute("data-theme");
+        return theme === "dark" ? "dark_dimmed" : "light";
+    };
+    const updateGiscusTheme = () => {
+        const iframe = document.querySelector("iframe.giscus-frame");
+        if (!iframe) return;
+
+        iframe.contentWindow.postMessage({
+            giscus: { setConfig: { theme: getCurrentGiscusTheme() } }
+        }, "https://giscus.app");
+    };
+    document.addEventListener("DOMContentLoaded", () => {
+        const attrs = {
+            "src": "https://giscus.app/client.js",
+            "data-repo": "{{ .Site.Params.giscus.repo }}",
+            "data-repo-id": "{{ .Site.Params.giscus.repoId }}",
+            "data-category": "{{ .Site.Params.giscus.category }}",
+            "data-category-id": "{{ .Site.Params.giscus.categoryId }}",
+            "data-mapping": "{{ .Site.Params.giscus.mapping }}",
+            "data-strict": "{{ .Site.Params.giscus.strict }}",
+            "data-reactions-enabled": "{{ .Site.Params.giscus.reactionsEnabled }}",
+            "data-emit-metadata": "{{ .Site.Params.giscus.emitMetadata }}",
+            "data-input-position": "{{ .Site.Params.giscus.inputPosition }}",
+            "data-theme": getCurrentGiscusTheme(),
+            "data-lang": "{{ $giscusLang }}",
+            "data-loading": "lazy",
+            "crossorigin": "anonymous",
+            "async": "",
+        };
+        const script = document.createElement("script");
+        Object.entries(attrs).forEach(([k, v]) => script.setAttribute(k, v));
+        document.querySelector("#m-comment").appendChild(script);
+        const themeButtons = document.querySelectorAll("#theme-toggle");
+        themeButtons.forEach(btn =>
+            btn.addEventListener("click", () => {
+                setTimeout(updateGiscusTheme, 60);
+            })
+        );
+    });
+</script>

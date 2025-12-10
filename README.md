@@ -64,3 +64,33 @@ enableMicrosoftClarity: true
 microsoftClarity:
   websiteid: "your-websiteid"
 ```
+
+### Comment
+
+#### 1. Giscus
+
+To configure Giscus, please refer to: [Giscus](https://giscus.app/)
+
+When adding Giscus, two improvements were made:
+
+Automatically switch the language.
+
+Automatically switch themes (Light, Dark).
+
+Here's how to use it, it's very simple.
+
+Go to `config\_default\params.yml`, set `comments` to `true`, and then fill in your own `repo`, `repoId`, and `categoryId`.
+
+```yml
+comments: true
+giscus:
+  repo: "[your-repo]"
+  repoId: "[your-repoId]"
+  categoryId: "[your-categoryId]"
+  category: "Announcements"
+  mapping: "pathname"
+  strict: "0"
+  reactionsEnabled: "1"
+  emitMetadata: "0"
+  inputPosition: "top" # bottom
+```

@@ -224,10 +224,10 @@ span {
     margin-top: 0;
     margin-bottom: 0;
     margin-left: 12px;
-    
+
 }
 
-.friend-link-container .url-name{
+.friend-link-container .url-name {
     font-size: 14px;
     font-weight: 400;
     color: var(--friend-link-url-name);
@@ -252,4 +252,9 @@ span {
     .friend-link-container .friend-bio {
         font-size: 14px;
     }
+}
+
+
+.giscus .giscus-frame title{
+    color: pink;
 }

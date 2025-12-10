@@ -70,7 +70,9 @@ params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   author: Donghai
   description: ""
-  defaultTheme: auto
+  defaultTheme: dark
+  # defaultTheme: light
+  # defaultTheme: auto # to switch between dark or light according to browser theme
   # disableThemeToggle: true
 
   ShowReadingTime: false
@@ -83,7 +85,6 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true # 显示目录
-  # comments: false
   images: ["images/papermod-cover.png"]
 
   # label:
