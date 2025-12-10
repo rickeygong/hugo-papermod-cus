@@ -1,7 +1,6 @@
 {{/* Contents of extend_head.html will be added to head of page. */}}
 {{/* and contents of extend_footer.html will be added to bottom of page. */}}
 
-
 {{- if hugo.IsProduction }}
 
 {{/* Umami Analytics Begin */}}
@@ -28,5 +27,17 @@
 {{- end }}
 {{- end }}
 {{/* Umami Analytics End */}}
+
+{{/* Microsoft Clarity Begin */}}
+{{- if site.Params.enableUmamiAnalytics }}
+<script type="text/javascript">
+    (function (c, l, a, r, i, t, y) {
+        c[a] = c[a] || function () { (c[a].q = c[a].q || []).push(arguments) };
+        t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
+        y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
+    })(window, document, "clarity", "script", "{{ site.Params.microsoftClarity.websiteid }}");
+</script>
+{{- end }}
+{{/* Microsoft Clarity End */}}
 
 {{ end }}

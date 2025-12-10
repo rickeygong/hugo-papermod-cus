@@ -43,6 +43,7 @@ git submodule update --init --recursive
 2. To add your own information, edit the `config/production/params.yml` file.
 
 ```yml
+# Umami Analytics
 enableUmamiAnalytics: true
 umamiAnalytics:
   websiteid: "your-web-site-id"
@@ -50,4 +51,16 @@ umamiAnalytics:
   dataDomains: "your-data-domains"
   scriptName: "your-script-name"
   enableTrackEvent: true
+```
+
+#### 1.2 Microsoft Clarity
+
+1. Set `enableMicrosoftClarity` to `true`.
+2. To add your own information, edit the `config/production/params.yml` file.
+
+```yml
+# Microsoft Clarity
+enableMicrosoftClarity: true
+microsoftClarity:
+  websiteid: "your-websiteid"
 ```

@@ -7,4 +7,7 @@ umamiAnalytics:
   scriptName: "your-script-name"
   enableTrackEvent: true
 
-
+# Microsoft Clarity
+enableMicrosoftClarity: true
+microsoftClarity:
+  websiteid: "your-websiteid"
