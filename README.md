@@ -26,8 +26,28 @@ git submodule update --init --recursive
 
 ## Changelog
 
-(😎I'll write it if I remember to.)
+( 😎 I'll write it if I remember to. )
 
 | Date | Description | Notes |
 | :--- | :--- | :--- |
-| 2025-12-09 | Added blogroll. |  |
+| 2025-12-10 | Added Website Analytics |  |
+| 2025-12-09 | Added blogroll |  |
+
+## Configuration
+
+### 1. Website Analytics
+
+#### 1.1 Umami Analytics
+
+1. Set `enableUmamiAnalytics` to `true`.
+2. To add your own information, edit the `config/production/params.yml` file.
+
+```yml
+enableUmamiAnalytics: true
+umamiAnalytics:
+  websiteid: "your-web-site-id"
+  domain: "your-domain"
+  dataDomains: "your-data-domains"
+  scriptName: "your-script-name"
+  enableTrackEvent: true
+```

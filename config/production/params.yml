@@ -1,0 +1,10 @@
+# Umami Analytics
+enableUmamiAnalytics: true
+umamiAnalytics:
+  websiteid: "your-web-site-id"
+  domain: "your-domain"
+  dataDomains: "your-data-domains"
+  scriptName: "your-script-name"
+  enableTrackEvent: true
+
+
