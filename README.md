@@ -1,88 +1,141 @@
-# About this repository
+## 📚 Table of Contents
 
-A blog built based on [Hugo PaperMod](https://github.com/rickeygong/hugo-PaperMod), with some styles modified according to personal preferences.
+- [About This Repository](#about-this-repository)
+- [Running Locally](#running-locally)
+- [Preview](#preview)
+- [Changelog](#changelog)
+- [Configuration Guide](#configuration-guide)
+  - [1. Website Analytics](#1-website-analytics)
+    - [1.1 Umami Analytics](#11-umami-analytics)
+    - [1.2 Microsoft Clarity](#12-microsoft-clarity)
+  - [2. Comment System](#2-comment-system)
+    - [2.1 Giscus](#21-giscus)
 
-Most of the styling modifications I made reference the [Astro Paper](https://github.com/satnaing/astro-paper) theme because it looks so great.
 
-## Running Locally
+# ✨ About This Repository
 
-1. Clone this repository.
+A personal blog built with **[Hugo PaperMod](https://github.com/rickeygong/hugo-PaperMod)**, with additional styling inspired by
+**[Astro Paper](https://github.com/satnaing/astro-paper)** — because it looks amazing.
 
-2. Inside the folder of your Hugo site 'hugo-papermod-cus', run:
+This repository includes:
+
+* 🎨 Custom styling on top of PaperMod
+* 💬 Theme-adaptive Giscus comments
+* 📊 Built-in web analytics (Umami + Clarity)
+
+---
+
+## 🚀 Running Locally
+
+(1) Clone this repository.
+
+```bash
+https://github.com/rickeygong/hugo-papermod-cus.git
+```
+
+(2) Inside the folder of your Hugo site 'hugo-papermod-cus', run:
 
 ```bash
 git submodule update --init --recursive
 ```
 
-## Let's see what it looks like
+(3) run
 
-- 🌞Light mode:
+```bash
+hugo server
+```
+
+---
+
+## 🖼️ Preview
+
+### 🌞 Light Mode
 
 ![Light mode home page](/assets/images/readmeHomePage-L.webp)
 
-- 🌙Dark mode:
+### 🌙 Dark Mode
 
 ![Dark mode home page](/assets/images/readmeHomePage-D.webp)
 
-## Changelog
+---
 
-( 😎 I'll write it if I remember to. )
+## 🗂️ Changelog
+
+( 😎 *I’ll try my best to keep it updated… maybe.* )
 
 | Date | Description | Notes |
 | :--- | :--- | :--- |
-| 2025-12-10 | Added Website Analytics |  |
-| 2025-12-09 | Added blogroll |  |
+| 2025-12-10 | Added website analytics | |
+| 2025-12-09 | Added blogroll | |
 
-## Configuration
+---
 
-### 1. Website Analytics
+# ⚙️ Configuration Guide
 
-#### 1.1 Umami Analytics
+Below is a quick setup reference for analytics & comments.
 
-1. Set `enableUmamiAnalytics` to `true`.
-2. To add your own information, edit the `config/production/params.yml` file.
+All configuration lives in: **`config/_default/params.yml`**.
+
+---
+
+## 📊 1. Website Analytics
+
+### 1.1 Umami Analytics
+
+Enable:
 
 ```yml
-# Umami Analytics
 enableUmamiAnalytics: true
+```
+
+Configure:
+
+```yml
 umamiAnalytics:
-  websiteid: "your-web-site-id"
+  websiteid: "your-website-id"
   domain: "your-domain"
   dataDomains: "your-data-domains"
   scriptName: "your-script-name"
   enableTrackEvent: true
 ```
 
-#### 1.2 Microsoft Clarity
+---
 
-1. Set `enableMicrosoftClarity` to `true`.
-2. To add your own information, edit the `config/production/params.yml` file.
+### 1.2 Microsoft Clarity
+
+Enable:
 
 ```yml
-# Microsoft Clarity
 enableMicrosoftClarity: true
+```
+
+Configure:
+
+```yml
 microsoftClarity:
   websiteid: "your-websiteid"
 ```
 
-### 2. Comment
+---
 
-#### 2.1 Giscus
+## 💬 2. Comment System
 
-To configure Giscus, please refer to: [Giscus](https://giscus.app/)
+### 2.1 Giscus (Auto theme + auto language)
 
-When adding Giscus, two improvements were made:
+This repository includes enhancements to allow:
 
-Automatically switch the language.
+* ✔ Automatic language detection
+* ✔ Automatic switching between Light / Dark mode
 
-Automatically switch themes (Light, Dark).
-
-Here's how to use it, it's very simple.
-
-Go to `config\_default\params.yml`, set `comments` to `true`, and then fill in your own `repo`, `repoId`, and `categoryId`.
+Enable comments:
 
 ```yml
 comments: true
+```
+
+Add your own config:
+
+```yml
 giscus:
   repo: "[your-repo]"
   repoId: "[your-repoId]"
@@ -92,5 +145,5 @@ giscus:
   strict: "0"
   reactionsEnabled: "1"
   emitMetadata: "0"
-  inputPosition: "top" # bottom
+  inputPosition: "top"
 ```
