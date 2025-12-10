@@ -23,7 +23,7 @@ minify:
 
 pagination:
   disableAliases: false
-  pagerSize: 8
+  pagerSize: 3
 
 languages:
   zh:

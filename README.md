@@ -16,11 +16,11 @@ git submodule update --init --recursive
 
 ## Let's see what it looks like
 
-- Light mode:
+- 🌞Light mode:
 
 ![Light mode home page](/assets/images/readmeHomePage-L.webp)
 
-- Dark mode:
+- 🌙Dark mode:
 
 ![Dark mode home page](/assets/images/readmeHomePage-D.webp)
 
@@ -65,9 +65,9 @@ microsoftClarity:
   websiteid: "your-websiteid"
 ```
 
-### Comment
+### 2. Comment
 
-#### 1. Giscus
+#### 2.1 Giscus
 
 To configure Giscus, please refer to: [Giscus](https://giscus.app/)
 
