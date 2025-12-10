@@ -121,7 +121,7 @@
 }
 
 .post-content li::marker {
-    color: var(--accent);
+    color: var(--accent-dk);
 }
 
 .post-content li p {
@@ -167,7 +167,7 @@
     min-width: 80px;
     padding: 8px 5px;
     line-height: 1.5;
-    border: 1px solid var(--accent);
+    border: 1px solid var(--accent-dk);
 }
 
 .post-content table th {
