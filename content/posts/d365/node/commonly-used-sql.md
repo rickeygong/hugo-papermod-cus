@@ -1,5 +1,5 @@
 ---
-title: "[Sample] D365 - Commonly Used SQL"
+title: "D365 - Commonly Used SQL"
 date: 2025-02-17T04:06:31Z
 tags: ["Dynamics 365", "D365 Note"]
 description: A guide on commonly used SQL queries in Dynamics 365 for querying views, reports, file sizes, security roles, and user assignments.

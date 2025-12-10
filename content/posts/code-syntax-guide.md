@@ -7,6 +7,7 @@ categories: ["themes", "syntax"]
 aliases: ["migrate-from-jekyl"]
 ShowToc: true
 TocOpen: true
+weight: 1
 ---
 
 ### Inline Code
