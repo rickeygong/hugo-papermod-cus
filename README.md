@@ -1,20 +1,6 @@
-## 📚 Table of Contents
+## ✨ About This Repository
 
-- [About This Repository](#about-this-repository)
-- [Running Locally](#running-locally)
-- [Preview](#preview)
-- [Changelog](#changelog)
-- [Configuration Guide](#configuration-guide)
-  - [1. Website Analytics](#1-website-analytics)
-    - [1.1 Umami Analytics](#11-umami-analytics)
-    - [1.2 Microsoft Clarity](#12-microsoft-clarity)
-  - [2. Comment System](#2-comment-system)
-    - [2.1 Giscus](#21-giscus)
-
-
-# ✨ About This Repository
-
-A personal blog built with **[Hugo PaperMod](https://github.com/rickeygong/hugo-PaperMod)**, with additional styling inspired by
+A personal blog built with **[Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod/)**, with additional styling inspired by
 **[Astro Paper](https://github.com/satnaing/astro-paper)** — because it looks amazing.
 
 This repository includes:
@@ -22,6 +8,16 @@ This repository includes:
 * 🎨 Custom styling on top of PaperMod
 * 💬 Theme-adaptive Giscus comments
 * 📊 Built-in web analytics (Umami + Clarity)
+
+## 🖼️ Preview
+
+### 🌞 Light Mode
+
+![Light mode home page](/assets/images/readmeHomePage-L.webp)
+
+### 🌙 Dark Mode
+
+![Dark mode home page](/assets/images/readmeHomePage-D.webp)
 
 ---
 
@@ -45,20 +41,6 @@ git submodule update --init --recursive
 hugo server
 ```
 
----
-
-## 🖼️ Preview
-
-### 🌞 Light Mode
-
-![Light mode home page](/assets/images/readmeHomePage-L.webp)
-
-### 🌙 Dark Mode
-
-![Dark mode home page](/assets/images/readmeHomePage-D.webp)
-
----
-
 ## 🗂️ Changelog
 
 ( 😎 *I’ll try my best to keep it updated… maybe.* )
@@ -68,15 +50,11 @@ hugo server
 | 2025-12-10 | Added website analytics | |
 | 2025-12-09 | Added blogroll | |
 
----
-
 # ⚙️ Configuration Guide
 
 Below is a quick setup reference for analytics & comments.
 
 All configuration lives in: **`config/_default/params.yml`**.
-
----
 
 ## 📊 1. Website Analytics
 
@@ -99,8 +77,6 @@ umamiAnalytics:
   enableTrackEvent: true
 ```
 
----
-
 ### 1.2 Microsoft Clarity
 
 Enable:
@@ -115,8 +91,6 @@ Configure:
 microsoftClarity:
   websiteid: "your-websiteid"
 ```
-
----
 
 ## 💬 2. Comment System
 
