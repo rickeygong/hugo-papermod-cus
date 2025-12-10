@@ -47,6 +47,7 @@ hugo server
 
 | Date | Description | Notes |
 | :--- | :--- | :--- |
+| 2025-12-10 | Added Giscus comments | |
 | 2025-12-10 | Added website analytics | |
 | 2025-12-09 | Added blogroll | |
 
