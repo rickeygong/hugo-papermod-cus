@@ -1,16 +1,15 @@
 {{- $commentsConfig := .Site.Params.comments -}}
 {{- $commentSystem := $commentsConfig.system -}}
 
-commentsConfig: {{ $commentsConfig }} <br />
-<hr>
-commentSystem: {{ $commentSystem }}
-<hr>
-commentsConfig.enabled: {{ $commentsConfig.enabled }}
-
 <div class="comments-container">
-    {{- if $commentsConfig.enabled -}}
-    {{- if eq $commentSystem "giscus" -}}
-    {{ partial "features/comments/giscus.html" (dict "Site" $.Site "Page" $ "id" "giscus-comments") }}
-    {{- end -}}
-    {{- end -}}
+  {{- if $commentsConfig.enabled -}}
+  {{- if eq $commentSystem "giscus" -}}
+  {{ partial "features/comments/giscus.html" (dict "Site" $.Site "Page" $ "id" "giscus-comments") }}
+  {{- else -}}
+  <p style="background: yellow; color: red; text-align: center; padding: 10px">
+    Oh! Unsupported comment system.
+  </p>
+  {{- end -}}
+
+  {{- end -}}
 </div>

@@ -1,62 +1,79 @@
 # 分享图标
-ShowShareButtons: true 
-ShareButtons: ["linkedin", "twitter","x","reddit","facebook","whatsapp","telegram","ycombinator"]
+ShowShareButtons: true
+ShareButtons:
+  ['linkedin', 'twitter', 'x', 'reddit', 'facebook', 'whatsapp', 'telegram', 'ycombinator']
 
 # 社交图标
 socialIcons:
   - name: github
     title: View Source on Github
-    url: "https://github.com/rickeygong"
+    url: 'https://github.com/rickeygong'
   - name: linkedin
     title: Connect on LinkedIn
-    url: "https://linkedin.com/in/donghai-gong-11a74b225/"
+    url: 'https://linkedin.com/in/donghai-gong-11a74b225/'
   - name: email
     title: Send me an Email
-    url: "mailto:gdhblog@outlook.com"
+    url: 'mailto:gdhblog@outlook.com'
   - name: instagram
     title: Follow on Instagram
-    url: "https://www.instagram.com/donghai_gong/"
+    url: 'https://www.instagram.com/donghai_gong/'
   - name: rss
     title: Subscribe to RSS Feed
-    url: "/index.xml"
+    url: '/index.xml'
 
 # 主页个人信息
 homeInfoParams:
-  Title: "Donghai"
+  Title: 'Donghai'
   Content: >
     👋 Welcome to my corner of the web. Here, I document the hurdles I hit in projects, the things that spark my curiosity, and the traces of where I've been — books, trips, and the people along the way.
-
 
 # cover:
 #     hidden: true # hide everywhere but not in structured data
 #     hiddenInList: true # hide on list pages and home
 #     hiddenInSingle: true # hide on single page
 
-
 footer:
   moe:
     enable: true
-    url: "https://icp.gov.moe/?keyword=mgrowup.com"
+    url: 'https://icp.gov.moe/?keyword=mgrowup.com'
   travellings:
     enable: true
-    url: "https://www.travellings.cn/go.html"
+    url: 'https://www.travellings.cn/go.html'
   foreverblog:
     enable: true
-    url: "https://www.foreverblog.cn/"
+    url: 'https://www.foreverblog.cn/'
   blogsclub:
     enable: true
-    url: "https://www.blogsclub.org/blog/45.html"  
+    url: 'https://www.blogsclub.org/blog/45.html'
 
 comments:
-  enabled: true
-  system: "giscus"
+  enabled: false
+  system: 'giscus'
   giscus:
-    repo: "[your-repo]"
-    repoId: "[your-repoId]"
-    categoryId: "[your-categoryId]"
-    category: "Announcements"
-    mapping: "pathname"
-    strict: "0"
-    reactionsEnabled: "1"
-    emitMetadata: "0"
-    inputPosition: "top" # bottom
+    repo: 'your-repo'
+    repoId: 'your-repoId'
+    categoryId: 'your-categoryId'
+    category: 'Announcements'
+    mapping: 'pathname'
+    strict: '0'
+    reactionsEnabled: '1'
+    emitMetadata: '0'
+    inputPosition: 'top'
+    lang: 'zh-CN'
+
+analytics:
+  enabled: false
+  umami:
+    enabled: false
+    websiteid: 'your-websiteid'
+    src: 'https://cloud.umami.is/script.js'
+    domains: 'your-domains'
+    enableTrackEvent: true
+    scriptName: ''
+    dataDomains: ''
+  clarity:
+    enabled: false
+    analytics: 'your-analytics'
+  google:
+    enabled: false
+    id: 'your-id'

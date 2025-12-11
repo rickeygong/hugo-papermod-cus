@@ -59,38 +59,23 @@ All configuration lives in: **`config/_default/params.yml`**.
 
 ## 📊 1. Website Analytics
 
-### 1.1 Umami Analytics
-
-Enable:
-
 ```yml
-enableUmamiAnalytics: true
-```
-
-Configure:
-
-```yml
-umamiAnalytics:
-  websiteid: "your-website-id"
-  domain: "your-domain"
-  dataDomains: "your-data-domains"
-  scriptName: "your-script-name"
-  enableTrackEvent: true
-```
-
-### 1.2 Microsoft Clarity
-
-Enable:
-
-```yml
-enableMicrosoftClarity: true
-```
-
-Configure:
-
-```yml
-microsoftClarity:
-  websiteid: "your-websiteid"
+analytics:
+  enabled: false
+  umami:
+    enabled: false
+    websiteid: 'your-websiteid'
+    src: 'https://cloud.umami.is/script.js'
+    domains: 'your-domains'
+    enableTrackEvent: true
+    scriptName: ''
+    dataDomains: ''
+  clarity:
+    enabled: false
+    analytics: 'your-analytics'
+  google:
+    enabled: false
+    id: 'your-id'
 ```
 
 ## 💬 2. Comment System
@@ -102,23 +87,21 @@ This repository includes enhancements to allow:
 * ✔ Automatic language detection
 * ✔ Automatic switching between Light / Dark mode
 
-Enable comments:
+Enable comments, add your own config:
 
 ```yml
-comments: true
-```
-
-Add your own config:
-
-```yml
-giscus:
-  repo: "[your-repo]"
-  repoId: "[your-repoId]"
-  categoryId: "[your-categoryId]"
-  category: "Announcements"
-  mapping: "pathname"
-  strict: "0"
-  reactionsEnabled: "1"
-  emitMetadata: "0"
-  inputPosition: "top"
+comments:
+  enabled: true
+  system: 'giscus'
+  giscus:
+    repo: 'your-repo'
+    repoId: 'your-repoId'
+    categoryId: 'your-categoryId'
+    category: 'Announcements'
+    mapping: 'pathname'
+    strict: '0'
+    reactionsEnabled: '1'
+    emitMetadata: '0'
+    inputPosition: 'top'
+    lang: 'zh-CN'
 ```

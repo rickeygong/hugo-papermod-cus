@@ -1,8 +1,8 @@
 # If your site is in 'https', then make sure your base url isn't written using 'http' otherwise your sitemap would
 # contain http (as opposeed to https) URLs. This would affect Google indexing of your URLs.
-baseURL: "http://localhost:1313/"
+baseURL: 'http://localhost:1313/'
 title: Donghai's Blog
-copyright: "© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)"
+copyright: '© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)'
 theme: [PaperMod]
 languageCode: zh
 
@@ -15,7 +15,7 @@ buildFuture: false
 buildExpired: false
 enableEmoji: true
 pygmentsUseClasses: true
-mainsections: ["posts", "papermod"]
+mainsections: ['posts', 'papermod']
 
 minify:
   disableXML: true
@@ -27,7 +27,7 @@ pagination:
 
 languages:
   zh:
-    languageName: "中文"
+    languageName: '中文'
     weight: 1
     taxonomies:
       category: categories
@@ -69,7 +69,7 @@ outputs:
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
   author: Donghai
-  description: ""
+  description: ''
   defaultTheme: dark
   # defaultTheme: light
   # defaultTheme: auto # to switch between dark or light according to browser theme
@@ -85,7 +85,7 @@ params:
   ShowAllPagesInArchive: true
   ShowPageNums: true
   ShowToc: true # 显示目录
-  images: ["images/papermod-cover.png"]
+  images: ['images/papermod-cover.png']
 
   # label:
   # iconSVG: '<svg xmlns="http://www.w3.org/2000/svg" height="25" viewBox="0 -960 960 960" fill="currentColor"><path d="M320-240h320v-80H320v80Zm0-160h320v-80H320v80ZM240-80q-33 0-56.5-23.5T160-160v-640q0-33 23.5-56.5T240-880h320l240 240v480q0 33-23.5 56.5T720-80H240Zm280-520v-200H240v640h480v-440H520ZM240-800v200-200 640-640Z"/></svg>'
@@ -99,13 +99,11 @@ params:
 
   assets:
     disableHLJS: true
-    favicon: "/favicon.ico"
-    favicon16x16: "/favicon-16x16.png"
-    favicon32x32: "/favicon-32x32.png"
-    apple_touch_icon: "/favicon-apple-touch-icon.png"
-    safari_pinned_tab: "/safari-pinned-tab.svg"
-    
-
+    favicon: '/favicon.ico'
+    favicon16x16: '/favicon-16x16.png'
+    favicon32x32: '/favicon-32x32.png'
+    apple_touch_icon: '/favicon-apple-touch-icon.png'
+    safari_pinned_tab: '/safari-pinned-tab.svg'
 
   # fuseOpts:
   #     isCaseSensitive: false
