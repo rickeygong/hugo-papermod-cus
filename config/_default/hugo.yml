@@ -4,7 +4,7 @@ baseURL: 'http://localhost:1313/'
 title: Donghai's Blog
 copyright: '© [PaperMod Contributors](https://github.com/adityatelange/hugo-PaperMod/graphs/contributors)'
 theme: [PaperMod]
-languageCode: zh
+languageCode: en
 
 hasCJKLanguage: true
 
@@ -26,8 +26,8 @@ pagination:
   pagerSize: 3
 
 languages:
-  zh:
-    languageName: '中文'
+  en:
+    languageName: 'English'
     weight: 1
     taxonomies:
       category: categories
@@ -36,22 +36,22 @@ languages:
     menu:
       main:
         - identifier: iHome
-          name: 首页
+          name: Home
           url: /
           weight: 1
         - identifier: iTags
-          name: 标签
+          name: Tags
           url: tags/
           weight: 10
         - identifier: iArchives
-          name: 归档
+          name: Archives
           url: archives
           weight: 90
           pre: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-archive"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 4m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v0a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /><path d="M5 8v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-10" /><path d="M10 12l4 0" /></svg>
           params:
             onlyShowPre: true
         - identifier: iSearch
-          name: 搜索
+          name: Search
           url: search/
           weight: 100
           pre: <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-search"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" /><path d="M21 21l-6 -6" /></svg>

@@ -58,3 +58,12 @@
 
 - id: archives_des
   translation: "All the articles I've archived."
+
+- id: footer-right-blogroll
+  translation: "友链"
+
+- id: footer-right-contact
+  translation: "联系我"
+
+- id: footer-right-rss
+  translation: "订阅RSS"
