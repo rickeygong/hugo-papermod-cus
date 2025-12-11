@@ -47,14 +47,16 @@ footer:
     enable: true
     url: "https://www.blogsclub.org/blog/45.html"  
 
-comments: false
-giscus:
-  repo: "[your-repo]"
-  repoId: "[your-repoId]"
-  categoryId: "[your-categoryId]"
-  category: "Announcements"
-  mapping: "pathname"
-  strict: "0"
-  reactionsEnabled: "1"
-  emitMetadata: "0"
-  inputPosition: "top" # bottom
+comments:
+  enabled: true
+  system: "giscus"
+  giscus:
+    repo: "[your-repo]"
+    repoId: "[your-repoId]"
+    categoryId: "[your-categoryId]"
+    category: "Announcements"
+    mapping: "pathname"
+    strict: "0"
+    reactionsEnabled: "1"
+    emitMetadata: "0"
+    inputPosition: "top" # bottom
