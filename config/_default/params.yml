@@ -46,34 +46,3 @@ footer:
     enable: false
     url: 'https://www.blogsclub.org/blog/45.html'
 
-comments:
-  enabled: false
-  system: 'giscus'
-  giscus:
-    repo: 'your-repo'
-    repoId: 'your-repoId'
-    categoryId: 'your-categoryId'
-    category: 'Announcements'
-    mapping: 'pathname'
-    strict: '0'
-    reactionsEnabled: '1'
-    emitMetadata: '0'
-    inputPosition: 'top'
-    lang: 'zh-CN'
-
-analytics:
-  enabled: false
-  umami:
-    enabled: false
-    websiteid: 'your-websiteid'
-    src: 'https://cloud.umami.is/script.js'
-    domains: 'your-domains'
-    enableTrackEvent: true
-    scriptName: ''
-    dataDomains: ''
-  clarity:
-    enabled: false
-    analytics: 'your-analytics'
-  google:
-    enabled: false
-    id: 'your-id'

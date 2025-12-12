@@ -1,13 +1,31 @@
-# Umami Analytics
-enableUmamiAnalytics: true
-umamiAnalytics:
-  websiteid: "your-web-site-id"
-  domain: "your-domain"
-  dataDomains: "your-data-domains"
-  scriptName: "your-script-name"
-  enableTrackEvent: true
+comments:
+  enabled: false
+  system: 'giscus'
+  giscus:
+    repo: 'your-repo'
+    repoId: 'your-repoId'
+    categoryId: 'your-categoryId'
+    category: 'Announcements'
+    mapping: 'pathname'
+    strict: '0'
+    reactionsEnabled: '1'
+    emitMetadata: '0'
+    inputPosition: 'top'
+    lang: 'zh-CN'
 
-# Microsoft Clarity
-enableMicrosoftClarity: true
-microsoftClarity:
-  websiteid: "your-websiteid"
+analytics:
+  enabled: false
+  umami:
+    enabled: false
+    websiteid: 'your-websiteid'
+    src: 'https://cloud.umami.is/script.js'
+    domains: 'your-domains'
+    enableTrackEvent: true
+    scriptName: ''
+    dataDomains: ''
+  clarity:
+    enabled: false
+    analytics: 'your-analytics'
+  google:
+    enabled: false
+    id: 'your-id'
