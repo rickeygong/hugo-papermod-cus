@@ -40,8 +40,12 @@
 
 .post-entry {
     position: relative;
-    margin: 10px;
-    padding: 10px;
+    /* margin: 10px; */
+    /* padding: 10px; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     background: var(--post-entry-bg);
     border-radius: var(--radius);
     transition: transform 0.1s;

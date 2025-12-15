@@ -1,16 +1,8 @@
 .header {
-    /* 可根据需要设置相对定位 */
     position: relative;
-
-    /* 设置最大宽度与.main一致 */
     max-width: calc(var(--main-width) + var(--gap) * 2);
-
-    /* 水平居中 */
     margin: auto;
-
-    /* 添加与.main相同的上下左右内边距 */
     padding: var(--gap);
-
 }
 
 .nav {
@@ -74,7 +66,7 @@ button#theme-toggle {
     white-space: nowrap;
 }
 
-#menu li a:hover{
+#menu li a:hover {
     color: var(--accent);
 }
 
